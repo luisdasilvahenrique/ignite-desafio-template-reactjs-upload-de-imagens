@@ -21,6 +21,7 @@ import {
   forwardRef,
   useCallback,
   useEffect,
+  InputHTMLAttributes,
 } from 'react';
 import {
   FieldError,
@@ -31,7 +32,7 @@ import {
 import { FiAlertCircle, FiPlus } from 'react-icons/fi';
 import { api } from '../../services/api';
 
-export interface FileInputProps {
+export interface FileInputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   error?: FieldError;
   setImageUrl: Dispatch<SetStateAction<string>>;
